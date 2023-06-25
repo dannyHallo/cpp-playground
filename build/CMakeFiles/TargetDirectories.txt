@@ -1,3 +1,0 @@
-E:/CCPlayground/build/CMakeFiles/CCPlayground.dir
-E:/CCPlayground/build/CMakeFiles/ALL_BUILD.dir
-E:/CCPlayground/build/CMakeFiles/ZERO_CHECK.dir
