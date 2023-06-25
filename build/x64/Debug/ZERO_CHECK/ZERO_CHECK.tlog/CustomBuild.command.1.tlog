@@ -1,0 +1,10 @@
+^E:\CCPLAYGROUND\BUILD\CMAKEFILES\15A94A8731F01D427414F9E7810F79B0\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe -SE:/CCPlayground -BE:/CCPlayground/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/CCPlayground/build/CCPlayground.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
