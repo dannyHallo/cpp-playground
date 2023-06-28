@@ -2,25 +2,29 @@
 #include <iostream>
 #include <vector>
 
-#include "test.hh"
-
-class A {
-  std::string str;
-
+class Animal {
 public:
-  explicit A(std::string st) : str(st) { std::cout << "st = " << st << std::endl; }
-  // A(std::string st) : str(st) { std::cout << "st = " << st << std::endl; }
+  virtual void speak() = 0;
+  void shit() { std::cout << "I'm shitting!" << std::endl; }
+};
+
+class Cat : public Animal {
+public:
+  virtual void speak() { std::cout << "I'm a cat!" << std::endl; }
+  void shit() { std::cout << "Miao BUUUU!" << std::endl; }
 };
 
 int main() {
-  A a{"hi"};
-  A *a2 = new A{"hi"};
-  A a3  = A{"aaa"};
-  A a4  = {"aaa"};
-  A a5  = "aaa";
-  A a6  = std::string{"aaa"};
+  Animal *c = new Cat{};
 
-  static_cast<A>("aaa");
+  c->speak();
+  c->shit();
+
+  Cat *c2 = new Cat{};
+
+  c2->speak();
+  c2->shit();
+
   system("pause");
   return 0;
 }

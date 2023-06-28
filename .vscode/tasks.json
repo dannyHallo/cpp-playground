@@ -5,6 +5,11 @@
       "label": "compile and run",
       "type": "shell",
       "command": "${workspaceFolder}/compile_and_run.bat"
+    },
+    {
+      "label": "fast git checkpoint",
+      "type": "shell",
+      "command": "${workspaceFolder}/git_fast_checkpoint.bat"
     }
   ]
 }
