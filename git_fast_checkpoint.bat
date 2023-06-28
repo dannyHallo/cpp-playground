@@ -15,7 +15,7 @@ set no5=%result%!string:~%x%,1!
 set /a x=%random% %% 26 
 set no6=%result%!string:~%x%,1!
 
-set result=%no1%%no2%%no3%%no4%%no5%%no6%
+set result=CKPT_%no1%%no2%%no3%%no4%%no5%%no6%
 echo %result%
 
 git status
