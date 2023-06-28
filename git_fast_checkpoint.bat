@@ -1,3 +1,9 @@
+@REM To use this script, simply run it in a Git repository directory. 
+@REM The script will generate a random 4-character hex string and use 
+@REM it as a commit message to commit and push changes to the remote repository.
+
+@REM PLEASE NOTICE: This script does not handle the logic for pulling from remote repository.
+
 @echo off
 setlocal enabledelayedexpansion
 set "string=0123456789ABCDEF"
