@@ -22,8 +22,12 @@ int main() {
 
   Cat *c2 = new Cat{};
 
+  void *c3 = new Cat{};
+
   c2->speak();
   c2->shit();
+
+  ((Cat *)c3)->speak();
 
   system("pause");
   return 0;
