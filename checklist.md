@@ -34,6 +34,12 @@
 - [x] explicit constructor:
       only useful for single parameter constructor, since only single parameter constructor can be used as implicit conversion.
 
+- [x] virtual functions:
+      used to infer this type of class can be overwrited by derived classes
+      pure virtual functions: virtual void f() = 0;
+      classes containing pure virtual functions are abstruct classes, these classes cannot be instantiated.
+      it must be overwritten in its derived classes.
+      
 - [ ] polymorphism
 
 - [ ] move constructor

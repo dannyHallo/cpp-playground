@@ -4,27 +4,17 @@
 
 class Animal {
 public:
-  virtual void speak() = 0;
-  void shit() { std::cout << "I'm shitting!" << std::endl; }
-};
+  Animal() = default;
 
-class Cat : public Animal {
-public:
-  virtual void speak() { std::cout << "I'm a cat!" << std::endl; }
-  void shit() { std::cout << "Miao BUUUU!" << std::endl; }
+  bool compare(Animal &a) const { return this == &a; }
 };
 
 int main() {
-  Animal *c = new Cat{};
+  Animal a1{};
+  Animal a2{};
 
-  c->speak();
-  c->shit();
-
-  Cat *c2 = new Cat{};
-
-  c2->speak();
-  c2->shit();
-
+  std::cout << a1.compare(a2);
+  std::cout << a1.compare(a1);
   system("pause");
   return 0;
 }
