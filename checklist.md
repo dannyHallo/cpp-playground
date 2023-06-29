@@ -42,18 +42,21 @@
 
 - [ ] polymorphism
 
-- [ ] move constructor
-
 - [x] copy constructor
-      used for copying: A a1{}; A a2{a1}; A a3 = a1;
+      A(const A& a) {}
       it can be overwritten by user defined copy constructor: A(const A& a) {}, when changed its position to
       private, it is inaccessable, thus the class is no longer copyable.
-
       copy constructors are constructors, so when a new object is constructed, the copy constructor is called.
 
 - [x] copy assignment operator
+      A &operator(const A& a) {}
+      The dicision of using copy/move constructor or copy/move assignment operator is made by the compiler, when a new object is constructed, the copy/move constructor is called, when a object is assigned (AFTER ITS CONSTRUCTION), the copy/move assignment operator is called.
 
-- [x] lvalue and rvalue (aka locator value and read value)
-      
+- [x] move constructor
+      A(A&& a) {}
+      move constructors are nothing special, it takes a rvalue reference as parameter, instead of a lvalue, we can use lvalue as rvalue by std::move(a1), the move statement is just a cast to rvalue reference, which indicates that the object is no longer used, and its storage can be moved to other newly created objects.
 
-- [ ] assignment operator
+      the 'a', is a LVALUE inside the move constructor, so take special care of it!
+
+- [x] move assignment operator
+      A &operator=(A&& a) {}
