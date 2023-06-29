@@ -39,11 +39,21 @@
       pure virtual functions: virtual void f() = 0;
       classes containing pure virtual functions are abstruct classes, these classes cannot be instantiated.
       it must be overwritten in its derived classes.
-      
+
 - [ ] polymorphism
 
 - [ ] move constructor
 
-- [ ] copy constructor
+- [x] copy constructor
+      used for copying: A a1{}; A a2{a1}; A a3 = a1;
+      it can be overwritten by user defined copy constructor: A(const A& a) {}, when changed its position to
+      private, it is inaccessable, thus the class is no longer copyable.
+
+      copy constructors are constructors, so when a new object is constructed, the copy constructor is called.
+
+- [x] copy assignment operator
+
+- [x] lvalue and rvalue (aka locator value and read value)
+      
 
 - [ ] assignment operator
