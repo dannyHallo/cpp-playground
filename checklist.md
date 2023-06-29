@@ -40,8 +40,6 @@
       classes containing pure virtual functions are abstruct classes, these classes cannot be instantiated.
       it must be overwritten in its derived classes.
 
-- [ ] polymorphism
-
 - [x] copy constructor
       A(const A& a) {}
       it can be overwritten by user defined copy constructor: A(const A& a) {}, when changed its position to
