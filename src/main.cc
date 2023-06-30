@@ -94,6 +94,7 @@ int main() {
   Cat a4{std::move(a2)};
   Cat a5{};
   a5 = std::move(a3);
+  Cat a6{Cat{16, "Ben"}};
   system("pause");
   return 0;
 }
