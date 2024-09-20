@@ -1,5 +1,6 @@
 {
   "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, AlignConsecutiveAssignments: Consecutive, ColumnLimit: 130}",
+  "command-runner.commands": { "build and run": "cmake --preset release && cmake --build build/Release && ./build/Release/cpp-playground" },
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
